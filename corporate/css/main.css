@@ -1,0 +1,474 @@
+@charset "UTF-8";
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover,
+li > p:hover {
+  cursor: pointer;
+}
+
+.change {
+  width: 5px;
+  height: 30px;
+  margin: 0 5px;
+  border-right: 1px solid;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  font-family: "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", "Helvetica", Meiryo, sans-serif;
+  font-weight: bold;
+  width: 100%;
+}
+
+.top {
+  height: 60px;
+  background: #fff;
+  z-index: 10000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.logo {
+  position: fixed;
+  top: 10px;
+  left: 15px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+#open {
+  position: fixed;
+  z-index: 20000;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+}
+
+#open .bar {
+  position: absolute;
+  color: #333;
+  width: 26px;
+  height: 1px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-bottom: 2px solid;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+#open .bar2 {
+  top: 9px;
+}
+
+#open .bar3 {
+  bottom: 10px;
+}
+
+#open:hover {
+  cursor: pointer;
+}
+
+#open.show .bar1 {
+  top: 11px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#open.show .bar2 {
+  opacity: 0;
+}
+
+#open.show .bar3 {
+  top: 11px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.overlay {
+  position: relative;
+  top: -500px;
+  opacity: 0;
+}
+
+.overlay.show {
+  -webkit-transition: .8s;
+  transition: .8s;
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  width: 100%;
+}
+
+nav.show {
+  position: fixed;
+  z-index: 20000;
+  top: 80px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+nav.show li {
+  height: 50px;
+}
+
+nav.show a {
+  color: #333;
+  font-size: 18px;
+}
+
+nav.show a img {
+  width: 150px;
+  margin-top: 120px;
+  margin-bottom: 30px;
+}
+
+nav.show a a:hover {
+  border-bottom: 1px solid #ccc;
+}
+
+.topImage {
+  position: absolute;
+  top: 100px;
+}
+
+.topImage img {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+.middle {
+  background: #eee;
+  padding: 10px 0;
+  margin-top: 180px;
+}
+
+.middle h1 {
+  font-size: 16px;
+  margin: 15px;
+  padding-top: 20px;
+  width: 200px;
+}
+
+.middle dl {
+  font-size: 13px;
+  margin: 15px;
+}
+
+.middle dl dt {
+  float: left;
+  line-height: 30px;
+  font-weight: normal;
+}
+
+.middle dl dd {
+  margin-left: 80px;
+  line-height: 30px;
+}
+
+.middle dl dd:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.middle a {
+  display: block;
+  font-size: 13px;
+  margin: 15px;
+  height: 30px;
+  color: #aaa;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.link ul {
+  margin: 50px 5vw;
+}
+
+.link ul li {
+  height: 18vw;
+  width: 85vw;
+  margin: 5px auto;
+  padding: 2px;
+  background: #333;
+  color: #fff;
+  position: relative;
+}
+
+.link ul li p {
+  margin: 0 0 0 30px;
+  line-height: 18vw;
+  height: 18vw;
+  width: 90%;
+  font-size: 16px;
+  position: absolute;
+  top: 0;
+  letter-spacing: .04em;
+}
+
+.netstore {
+  margin: 0 auto;
+  width: 85%;
+}
+
+.netstore img {
+  width: 100%;
+}
+
+.netstore img:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+}
+
+footer .pc {
+  display: none;
+}
+
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 30px;
+  padding: 30px;
+}
+
+footer ul li {
+  height: 40px;
+  width: 150px;
+  margin: 0;
+}
+
+footer ul li p {
+  height: 40px;
+  line-height: 40px;
+  margin: 0;
+  font-size: 14px;
+}
+
+footer ul .kirikae {
+  width: 150px;
+}
+
+footer ul .kirikae span {
+  height: 40px;
+  line-height: 40px;
+}
+
+.right {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px 0;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+@media (min-width: 810px) {
+  .top {
+    height: 80px;
+  }
+  .logo {
+    width: 120px;
+  }
+  .logo img {
+    width: 100px;
+    height: 60px;
+  }
+  .topImage {
+    margin: 0 60px;
+  }
+  .middle h1 {
+    margin: 10px 100px 0;
+  }
+  .middle dl {
+    margin: 10px 100px;
+  }
+  .middle dl dd {
+    margin-left: 100px;
+  }
+  .middle a {
+    margin: 5px 100px 10px;
+  }
+  .link ul {
+    margin: 50px auto;
+    width: 95%;
+    display: -ms-grid;
+    display: grid;
+    gap: 1px;
+    -ms-grid-rows: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template: 1fr 1fr / 1fr 1fr 1fr;
+  }
+  .link ul li {
+    height: 10vw;
+    width: 30vw;
+    text-align: center;
+  }
+  .link ul li p {
+    margin: 0 auto;
+    line-height: 10vw;
+    height: 10vw;
+    width: 100%;
+    font-size: 20px;
+  }
+  .netstore {
+    width: 423px;
+  }
+  footer .sp {
+    display: none;
+  }
+  footer .pc {
+    display: block;
+    margin-top: 30px;
+  }
+  footer .pc img {
+    width: 130px;
+  }
+  footer ul .footerlink1 {
+    height: 80px;
+    width: 95%;
+    margin: 0 auto;
+    border-bottom: 1px solid #fff;
+  }
+  footer ul .footerlink1 p {
+    line-height: 80px;
+    font-size: 18px;
+  }
+  footer ul .footerlink1 p::after {
+    content: "∨";
+    color: #fff;
+    font-size: 24px;
+    float: right;
+    padding-right: 15px;
+  }
+  footer ul .footerlink2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 30px;
+  }
+  footer ul .footerlink2 p {
+    text-align: center;
+    margin: 0 auto;
+  }
+  footer ul .kirikae {
+    height: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #open {
+    display: none;
+  }
+  .logo {
+    left: 40px;
+  }
+  .overlay {
+    top: 0;
+    opacity: 1;
+  }
+  nav {
+    display: block;
+    z-index: 20000;
+    position: fixed;
+    top: 10px;
+    right: 5px;
+    margin-right: 36px;
+  }
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 60px;
+  }
+  nav ul li {
+    margin-left: 6px;
+    height: 48px;
+  }
+  nav ul a,
+  nav ul .kirikae {
+    text-decoration: none;
+    color: #000;
+    height: 58px;
+    line-height: 58px;
+    font-size: 14px;
+    margin-left: 4px;
+  }
+  nav ul a:hover {
+    opacity: 1;
+  }
+  nav ul li:hover {
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+  }
+  nav ul img {
+    height: 3vw;
+    padding: 13px 0;
+    margin: 0 15px;
+  }
+  nav ul img:hover {
+    opacity: 0.7;
+  }
+  .link ul {
+    margin: 50px 60px;
+    width: 90%;
+  }
+  .link ul li {
+    width: 29.5vw;
+  }
+  .link ul p {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .logo {
+    left: 60px;
+  }
+  nav {
+    margin-right: 60px;
+  }
+  nav ul li {
+    margin-left: 15px;
+  }
+  nav ul a,
+  nav ul .kirikae {
+    font-size: 16px;
+  }
+  nav ul img {
+    height: 32px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
